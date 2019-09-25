@@ -7,7 +7,7 @@ import java.util.Date;
 public class Casestudy_five {
 	public static int x=1,y=1;
 	 public static String date1,date2;  
-	    public static String[] c=new String[25];  
+	     public static String[] c=new String[25];  
 		public static int booked[]=new int[25];
 		public static int dates[]=new int[25];
 		
@@ -64,20 +64,23 @@ public class Casestudy_five {
 			int  start= sc.nextInt();
 			System.out.println("Enter the end date");
 			 int end =sc.nextInt();
-			 for(int w=1;w<x;w++)
+			// System.out.println(x);
+			 for(int w=1;w<=x;w++)
 			 {
-				 if(dates[w]==start)
+				 for(int l=1;l<=x;l++)
 				 {
-					 start++;
-					 System.out.println(w);
-					 System.out.println(c[w]);
-					 
+					 if(dates[l]==start)
+					 {
+						 
+						 System.out.println(l);
+						 System.out.println(c[l]);	
+
+					 }
+										 
 				 }
-				 if(start==end)
-				 {
-					 break;
-				 }
-				
+				 start=start+1;
+				 System.out.println(start);
+
 			 }
 		}
 
