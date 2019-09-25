@@ -135,7 +135,7 @@ public class Booking {
 	{
 		System.out.println("Enter the start date");
 		String date1=sc.next();
-		 Date start=formatter1.parse(date1); 
+		Date start=formatter1.parse(date1); 
 		System.out.println("Enter the end date");
 		String date2=sc.next();
 		 Date end=formatter1.parse(date2); 	
