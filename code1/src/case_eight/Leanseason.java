@@ -9,9 +9,9 @@ public class Leanseason extends Booking {
 	public void setDiscount(int discount) {
 		this.discount = discount;
 	}
-	public void doubleroomBooking(int person, int total_days,double tariff,int discount)
+	public void doubleroomBooking(int person, int total_days,double tariff,int discount,int ac)
 	{
-		System.out.println("Total Tariff:" +(person*total_days*tariff-discount));
+		System.out.println("Total Tariff:" +(person*total_days*tariff-discount+ac));
 
     }
 

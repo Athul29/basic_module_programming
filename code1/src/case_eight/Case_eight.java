@@ -14,7 +14,8 @@ public class Case_eight {
 		int month;
 		double tariff;
 		int peak=0;
-		int achgs;
+		int ac=0;
+	    Peakseason bs=new Peakseason();
 		Scanner sc=new Scanner(System.in);
 		System.out.println("Booking");
 		System.out.println("The number of persons");
@@ -25,10 +26,15 @@ public class Case_eight {
 		roomType=sc.next();
 		if(roomType.equals("AC")==true)
 		{
-			achgs=500;
+			bs.achgs=500;
+			ac=bs.achgs;
+			
 		}
 		else
-			achgs=500;
+		{
+			bs.achgs=250;
+			ac=bs.achgs;
+		}
 		System.out.println("Enter the month");
 		month=sc.nextInt();
 		if(month==4 || month==5 ||  month==6 || month==9 ||month==11||month==12 )
@@ -36,14 +42,15 @@ public class Case_eight {
 			 System.out.println("Enter the peak charges");
 			 peak=sc.nextInt();	
 		}
-		else if(month==1 || month==2 ||  month==3 || month==7 ||month==8||month==9 || month==10)
+		if(month==1 || month==2 ||  month==3 || month==7 ||month==8 || month==10)
 		{
 			System.out.println("Enter the discount");
 			discount=sc.nextInt();
 		}
+		
 		System.out.println("Enter the tariff for a single person");
 		tariff=sc.nextFloat();
-		Peakseason bs=new Peakseason();
+		
 	    bs.setPerson(person);
 	    int a=bs.getPerson();
 	    bs.setTotal_days(total_days);
@@ -61,12 +68,13 @@ public class Case_eight {
 	    int f=ls.getDiscount() ;   
 	    		if((d>=1&&d<=3)||(d>=7&&d<=10))
 	    		{
-	    		ls.doubleroomBooking(a, b, c, f);
+	    		  ls.doubleroomBooking(a, b, c, f,ac);
 	    		}
 	    		else
 	    		{
-	    		  bs.doubleroomBooking(a, b, c, x);
+	    		   bs.doubleroomBooking(a, b, c, x,ac);
 	    		}
-	    }
+
+	}
 
 }

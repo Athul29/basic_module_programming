@@ -6,6 +6,7 @@ public class Booking {
 	String roomType;
 	int month;
 	double tariff;
+	int achgs;
 	public int getPerson() {
 		return person;
 	}
@@ -46,12 +47,6 @@ public class Booking {
 		this.month = month;
 	}
 
-	
-	public void doubleroomBooking(int person, int total_days,double tariff,String RoomType)
-	{
-		System.out.println("Total Tariff:"+person*total_days*tariff);
-
-    }
 }
 
 
